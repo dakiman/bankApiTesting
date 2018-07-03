@@ -3,15 +3,15 @@ package models;
 import java.util.Date;
 
 public class Transaction {
-    public int Id;
-    public int AccountFromId;
+    public Integer Id;
+    public Integer AccountFromId;
     public String AccountFromClientName;
-    public int AccountToId;
+    public Integer AccountToId;
     public String AccountToClientName;
-    public int TransactionTypeId;
+    public Integer TransactionTypeId;
     public String TransactionTypeName;
-    public int TransactionStatusId;
+    public Integer TransactionStatusId;
     public String TransactionStatusName;
-    public int Sum;
+    public Integer Sum;
     public Date Date;
 }

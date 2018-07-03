@@ -26,15 +26,15 @@ public class ClientsTests {
         Assert.assertEquals(client, newClient);
     }
 
-//    @Test
-//    void nameIsRequired() {
-//        Client client = clientService.generateClient();
-//        client.Name = null;
-//        Response res = clientService.addClient(client);
-//        Assert.assertTrue(res.statusCode() == 400);
-//        String msg = res.getBody().jsonPath().getString("ModelState.'clientModel.Name'[0]");
-//        Assert.assertEquals(msg, "The Name field is required.");
-//    }
+    @Test
+    void nameIsRequired2() {
+        Client client = clientService.generateClient();
+        client.Name = null;
+        Response res = clientService.addClient(client);
+        Assert.assertTrue(res.statusCode() == 400);
+        String msg = res.getBody().jsonPath().getString("ModelState.'clientModel.Name'[0]");
+        Assert.assertEquals(msg, "The Name field is required.");
+    }
 
     @Test
     void nameIsRequired() {

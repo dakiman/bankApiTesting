@@ -4,7 +4,7 @@ import client.RestClient;
 import io.restassured.response.Response;
 import models.Transaction;
 
-class TransactionService {
+public class TransactionService {
     RestClient restClient = new RestClient("transactions/");
 
     public Response addTransaction(Transaction transaction) {

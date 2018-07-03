@@ -1,7 +1,6 @@
 package client;
 
 import io.restassured.response.Response;
-
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 

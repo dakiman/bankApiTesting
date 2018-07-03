@@ -12,7 +12,7 @@ public class AssertionUtils {
     }
 
     public static void assertValidationErrorMessage(Response res, String messageIndex, String message) {
-        messageIndex = "ModelState.'clientModel." + messageIndex + "'[0]";
+        messageIndex = "ModelState.'" + messageIndex + "'[0]";
         assertMessage(res, messageIndex, message, 400);
     }
 

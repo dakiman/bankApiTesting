@@ -1,10 +1,7 @@
 package models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 public class Address {
-//    @JsonIgnore
-    public long Id;
+    public Integer Id;
     public String Street;
     public String City;
     public String Country;

@@ -15,6 +15,7 @@ public class ClientService {
 
     private Address generateAddress() {
         Address address = new Address();
+        address.Id = 0;
         address.Country = "Macedonia";
         address.City = "Skopje";
         address.Street = RandomUtils.randomString(15);
@@ -24,11 +25,17 @@ public class ClientService {
 
     public Client generateClient() {
         Client client = new Client();
+        client.Id = 0;
         client.Name = RandomUtils.randomString();
-        client.ClientTypeId = Long.parseLong(String.valueOf(RandomUtils.randomInt(1, 2)));
+        client.ClientTypeId = Long.valueOf(RandomUtils.randomInt(1, 2));
         client.IsActive = true;
         client.Address = generateAddress();
 
         return client;
+    }
+
+    public Client generateAndAddClient() {
+        Client client = generateClient();
+        return addClient(client).getBody().as(Client.class);
     }
 }

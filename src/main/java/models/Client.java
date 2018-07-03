@@ -2,10 +2,11 @@ package models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class Client {
-    public int Id;
+    public Integer Id;
     public String Name;
     public Long AddressId;
     public Long ClientTypeId;

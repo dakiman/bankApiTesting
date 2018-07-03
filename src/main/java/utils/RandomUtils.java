@@ -21,8 +21,13 @@ public class RandomUtils {
         return RandomStringUtils.randomAlphabetic(size);
     }
 
-    public static int randomInt(int min, int max) {
+    public static Integer randomInt(int min, int max) {
         return new Random().nextInt((max - min) + 1) + min;
     }
+
+    public static String randomIntAsString(int min, int max) {
+        return String.valueOf(new Random().nextInt((max - min) + 1) + min);
+    }
+
 
 }
